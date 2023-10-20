@@ -24,7 +24,7 @@ const page = () => {
     setmainTask(copyTask);
   };
 
-  let renderHandler = <h2 className="font-bold">No Task Available</h2>;
+  let renderHandler = <h2 className="font-bold">No Task Available!</h2>;
 
   // using ternary operator
   mainTask.length == 0
@@ -44,7 +44,7 @@ const page = () => {
                     deleteHandler(i);
                   }
                 }}
-                className="bg-red-400 rounded-xl  text-white px-4 py-2"
+                className="bg-red-600 hover:bg-red-900 rounded-xl  text-white px-4 py-2"
               >
                 Delete
               </button>
