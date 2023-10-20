@@ -34,7 +34,7 @@ const page = () => {
           <>
             <li key={i} className="flex items-center justify-between mb-4">
               <div className="bg-gray-200 p-2 rounded-md flex items-center justify-between mb-4">
-                <h2 className="font-bold">Task : {t.title}</h2>
+                <h2 className="font-bold">Task {i+1} : {t.title}</h2>
                 <p className="text-gray-600 ml-72">Description : {t.desc}</p>
               </div>
 
@@ -87,7 +87,10 @@ const page = () => {
       <hr className="border-2 " />
 
       <div className="p-4 bg-slate-400 ">
-        <ul>{renderHandler}</ul>
+        <h2 className="font-bold text-2xl">My Task</h2>
+        <hr className="border-b-2" />
+
+        <ul className="mt-1">{renderHandler}</ul>
       </div>
     </>
   );
