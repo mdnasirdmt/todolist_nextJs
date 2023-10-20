@@ -75,9 +75,7 @@ const page = () => {
           type="text"
           placeholder="Enter Description "
           value={desc}
-          onChange={(e) => {
-            setdesc(e.target.value);
-          }}
+          onChange={(e) => {setdesc(e.target.value)}}
           required
         />
 
