@@ -28,26 +28,28 @@ const page = () => {
 
   // using ternary operator
   mainTask.length == 0
-    ? (renderHandler = <h2 className="font-bold">No Task Available</h2>)
+    ? renderHandler
     : (renderHandler = mainTask.map((t: any, i: any) => {
         return (
-          <li key={i} className="flex items-center justify-between mb-4">
-            <div className="bg-gray-200 p-2 rounded-md flex items-center justify-between mb-4">
-              <h2 className="font-bold">Task : {t.title}</h2>
-              <p className="text-gray-600 ml-24">Description : {t.desc}</p>{" "}
-            </div>
+          <>
+            <li key={i} className="flex items-center justify-between mb-4">
+              <div className="bg-gray-200 p-2 rounded-md flex items-center justify-between mb-4">
+                <h2 className="font-bold">Task : {t.title}</h2>
+                <p className="text-gray-600 ml-72">Description : {t.desc}</p>
+              </div>
 
-            <button
-              onClick={() => {
-                if (window.confirm("Are you sure?")) {
-                  deleteHandler(i);
-                }
-              }}
-              className="bg-red-400 rounded-xl  text-white px-4 py-2"
-            >
-              Delete
-            </button>
-          </li>
+              <button
+                onClick={() => {
+                  if (window.confirm("Are you sure?")) {
+                    deleteHandler(i);
+                  }
+                }}
+                className="bg-red-400 rounded-xl  text-white px-4 py-2"
+              >
+                Delete
+              </button>
+            </li>
+          </>
         );
       }));
 
