@@ -64,7 +64,7 @@ const page = () => {
         <input
           className="border-2 border-black rounded ml-28 p-1 m-2"
           type="text"
-          placeholder="Enter Your Title "
+          placeholder="Enter Your Task "
           value={title}
           onChange={(e) => settitle(e.target.value)}
           required
